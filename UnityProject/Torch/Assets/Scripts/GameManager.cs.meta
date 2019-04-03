@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 07c2a2647f976244cb4d19e5e772abb9
+timeCreated: 1553671401
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_Player: {fileID: 1333929884410218, guid: 85b795e567e59744cbd5eba103593811, type: 2}
+  - m_GameOverUI: {fileID: 1333079765271932, guid: 19ddda02a62fb9549adc57987f63dd5e,
+      type: 2}
+  - m_GameClearUI: {fileID: 1254626236345738, guid: 19ddda02a62fb9549adc57987f63dd5e,
+      type: 2}
+  - m_CountUI: {fileID: 1336782217180842, guid: 19ddda02a62fb9549adc57987f63dd5e,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
