@@ -162,6 +162,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    //アイテムを指定したアイテムリストに格納する関数
     public void AddLog(List<ItemData> itemDataList, int itemtype)
     {
         ItemData sitemData = new ItemData();
@@ -176,6 +177,7 @@ public class PlayerController : MonoBehaviour {
         itemDataList.Add(sitemData);
     }
 
+    //各シークエンス終了時にシリアライズとPlayerPrefsへの格納を行う関数
     public void SaveToPlayerPrefs() { 
         PlayerPrefs.SetInt("sequenceId", m_sequenceId);
 

@@ -14,7 +14,6 @@ public class SwitchController : MonoBehaviour {
     //ゴーストの再生を行う関数
     public IEnumerator PlayGhost()
     {
-        
         float sPassedTime = 0f; //item.timeがスタート時からの時間経過のため、差分をとるための変数
 
         foreach (ItemData item in m_itemList)
@@ -43,7 +42,6 @@ public class SwitchController : MonoBehaviour {
                 //Exit封鎖
                 Debug.Log("exit2封鎖します。");
                 m_ExitManager.CloseExit(1);
-
             }
 
             sPassedTime = item.time;
