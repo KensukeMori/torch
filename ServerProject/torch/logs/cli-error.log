@@ -1,0 +1,48 @@
+2019-03-28 16:35:15 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'torch.item_type' doesn't exist in C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'item_type', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('item_type', Array)
+#2 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\ORM\Table.php(555): Cake\Database\Schema\CachedCollection->describe('item_type')
+#3 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\ORM\Table.php(680): Cake\ORM\Table->getSchema()
+#4 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'item_type', 'ItemType')
+#7 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('ItemType')
+#8 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('ItemType')
+#9 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('ItemType', 0)
+#10 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('itemType')
+#12 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Console\CommandRunner.php(371): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Console\CommandRunner.php(166): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'torch.item_type' doesn't exist in C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(129): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'item_type', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('item_type', Array)
+#10 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\ORM\Table.php(555): Cake\Database\Schema\CachedCollection->describe('item_type')
+#11 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\ORM\Table.php(680): Cake\ORM\Table->getSchema()
+#12 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'item_type', 'ItemType')
+#15 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('ItemType')
+#16 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('ItemType')
+#17 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('ItemType', 0)
+#18 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('itemType')
+#20 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Console\CommandRunner.php(371): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\vendor\cakephp\cakephp\src\Console\CommandRunner.php(166): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\Users\koguy\Documents\TechStadium\ts-un-stu_201902\20_ServerProject\htdocs\torch\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
